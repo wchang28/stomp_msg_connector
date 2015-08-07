@@ -1,0 +1,36 @@
+{
+	"brokers":
+	{
+		"MyMsgBroker":
+		{
+			"url": "@@BrokerUrl@@"
+			,"broker_options": {
+				"reconnectIntervalMS": 10000
+				,"outgoingHeartBeatMS": 10000
+				,"heartBeatScaleFactor": 0.8
+			}
+			,"login_options":
+			{
+				"login": "@@Username@@"
+				,"passcode": "@@Password@@"
+			}
+			,"tlsOptions":
+			{
+				"rejectUnauthorized": true/false (default to true)
+			}
+			,"show_heart_beat": false
+			,"debug": false
+			,"processors":
+			{
+				"my_queue_processor":
+				{
+					"incoming": "/queue/my_queue"
+					,"subscribe_headers": {"ack": "client"}
+					,"autoAckByClient": true/false (default to true)
+					,"handler_path": "C:/my_projects/my_queue"
+					,"handler_key": "my_handler_key"
+				}
+			}
+		}
+	}
+}
