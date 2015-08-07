@@ -1,0 +1,1 @@
+module.exports = require('./lib/stomp_msg_connector.js');
