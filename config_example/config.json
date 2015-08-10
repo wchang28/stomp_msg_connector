@@ -4,12 +4,12 @@
 		"MyMsgBroker":
 		{
 			"url": "@@BrokerUrl@@"
-			,"broker_options": {
+			,"brokerOptions": {
 				"reconnectIntervalMS": 10000
 				,"outgoingHeartBeatMS": 10000
 				,"heartBeatScaleFactor": 0.8
 			}
-			,"login_options":
+			,"loginOptions":
 			{
 				"login": "@@Username@@"
 				,"passcode": "@@Password@@"
